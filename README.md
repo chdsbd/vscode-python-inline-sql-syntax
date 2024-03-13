@@ -6,10 +6,27 @@ Add SQL syntax highlighting for Python strings.
 
 ### Syntax highlighting for mutli-line strings
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![python sample with multi-line SQL](assets/multi-line-string.png)
 
-For example if there is an image subfolder under your extension project workspace:
+## Development
 
-\!\[feature X\]\(images/feature-x.png\)
+### VSCode instructions
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+#### Get up and running straight away
+
+- Press `F5` to open a new window with your extension loaded.
+
+#### Make changes
+
+- You can relaunch the extension from the debug toolbar after changing code in `src/extension.ts`.
+- You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
+
+### Publish
+
+```bash
+vsce package
+vsce login chdsbd
+vsce publish <version>
+```
+
+[marketplace]: https://marketplace.visualstudio.com/items?itemName=chdsbd.python-inline-sql-syntax

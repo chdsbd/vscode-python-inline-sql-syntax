@@ -4,6 +4,7 @@
   "description": "Add SQL syntax highlighting for Python strings.",
   "publisher": "chdsbd",
   "homepage": "https://github.com/chdsbd/vscode-python-inline-sql-syntax/blob/main/README.md",
+  "icon": "images/logo256.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/chdsbd/vscode-python-inline-sql-syntax.git"
