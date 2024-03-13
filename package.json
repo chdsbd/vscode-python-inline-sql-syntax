@@ -1,0 +1,64 @@
+{
+  "name": "python-inline-sql-syntax",
+  "displayName": "Python Inline Sql Syntax",
+  "description": "Add SQL syntax highlighting for Python strings.",
+  "publisher": "chdsbd",
+  "homepage": "https://github.com/chdsbd/vscode-python-inline-sql-syntax/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chdsbd/vscode-python-inline-sql-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chdsbd/vscode-python-inline-sql-syntax/issues"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "sql",
+    "highlight",
+    "inline"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/highlight-sql.json",
+        "scopeName": "highlight-sql.injection",
+        "injectTo": [
+          "source.python"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.sql": "sql"
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
