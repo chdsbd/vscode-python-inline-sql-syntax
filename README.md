@@ -6,7 +6,7 @@ Add SQL syntax highlighting for Python strings.
 
 ### Syntax highlighting for mutli-line strings
 
-![python sample with multi-line SQL](assets/multi-line-string.png)
+![python sample with multi-line SQL](./images/multi-line-string.png)
 
 ## Development
 
