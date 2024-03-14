@@ -1,11 +1,11 @@
 {
   "fileTypes": ["py"],
-  "injectionSelector": "L:string.quoted.multi.python, L:meta.fstring.python - (comment.line.number-sign.python, punctuation.definition.comment.python)",
+  "injectionSelector": "L:string.quoted.multi.python - (comment.line.number-sign.python, punctuation.definition.comment.python)",
   "patterns": [
     {
       "name": "meta.embedded.sql",
       "begin": "\\s*((?i)(SELECT|INSERT INTO|DELETE|UPDATE|CREATE TABLE|CREATE INDEX)|(--.*))",
-      "end": "(?=\"\"\")",
+      "end": "(?=\"\"\")|(?=''')",
       "beginCaptures": {
         "2": { "name": "keyword.other.DML.sql" },
         "3": { "name": "comment.line.double-dash.sql" }

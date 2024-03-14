@@ -8,6 +8,33 @@ Add SQL syntax highlighting for Python strings.
 
 ![python sample with multi-line SQL](./images/multi-line-string.png)
 
+Supported syntax:
+
+```py
+double_quotes_multi_line = """
+select *
+from users
+where id = 82394;
+"""
+single_quotes_multi_line = '''
+select *
+from users
+where id = 82394;
+'''
+```
+
+Not supported:
+
+```py
+single_line_strings = 'select * from users where id = 82394;'
+f_strings_ = f'select * from users where id = 82394;'
+f_strings_multi_line = f'''
+select *
+from users
+where id = 82394;
+'''
+```
+
 ## Development
 
 ### VSCode instructions
